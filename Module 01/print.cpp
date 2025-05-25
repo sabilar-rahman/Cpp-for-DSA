@@ -6,6 +6,6 @@ int main()
     double d = 54.54;
     std ::cout << x << " " << c << std::endl
                << d << std::endl;
-    std ::cout << " My number is:" << x << std::endl;
+    std ::cout << "My number is:" << x << std::endl;
     return 0;
 }
