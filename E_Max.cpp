@@ -10,15 +10,17 @@ int main()
     {
         cin >> a[i];
     }
-    int max = INT_MIN;
+    int mx = INT_MIN;
     for (int i; i < n; i++)
     {
-        if (a[i] > max)
-        {
-            max = a[i];
-        }
+
+        mx = max(a[i], mx);
+        // if (a[i] > mx)
+        // {
+        //     mx = a[i];
+        // }
     }
-    cout << max << endl;
+    cout << mx << endl;
 
     return 0;
 }
