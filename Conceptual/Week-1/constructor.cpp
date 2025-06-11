@@ -23,7 +23,7 @@ public:
 
 int main()
 {
-    Student salman("Salman", 1, 'A', 80, 8);  // Now this matches the updated constructor
+    Student salman("Salman", 1, 'A', 80, 8);  
     cout << salman.name << endl;
 
     return 0;
