@@ -28,6 +28,13 @@ int main()
         cin >> a[i].name >> a[i].cls >> a[i].section >> a[i].id;
     }
     // for reverse
+    //     for (int i = 0; i < n / 2; i++)
+    // {
+    //     string temporary = a[i].section;
+    //     a[i].section = a[n - i - 1].section;
+    //     a[n - i - 1].section = temporary;
+    // }
+
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = i + 1; j < n; j++)
@@ -37,7 +44,6 @@ int main()
             a[j].section = temporary;
         }
     }
-
     for (int i = 0; i < n; i++)
     {
         cout << a[i].name << " " << a[i].cls << " " << a[i].section << " " << a[i].id << endl;
