@@ -1,0 +1,1 @@
+{"name":"Local: binary_search","url":"d:\\Coding Project\\Coding\\Phitron\\C++ for DSA\\Module 03\\binary_search.cpp","tests":[{"id":1751095244383,"input":"6\n1 5 9 11 15 25\n5","output":"Found"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Coding Project\\Coding\\Phitron\\C++ for DSA\\Module 03\\binary_search.cpp","group":"local","local":true}
