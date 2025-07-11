@@ -5,7 +5,7 @@ class Node
 {
 public:
     int val;
-    Node *next;
+    Node* next;
     Node(int val)
     {
         this->val = val;
@@ -13,16 +13,21 @@ public:
     }
 };
 
-void insert_at_head(Node *&head, int val)
+void insert_at_head(Node* &head, Node* &tail, int val)
 {
-    Node *newNode = new Node(val);
+    Node* newNode = new Node(val);
+    if(head == NULL){
+        head = newNode;
+        tail = newNode;
+        return;
+    }
     newNode->next = head;
     head = newNode;
 }
 
-void insert_at_tail(Node *&head, Node *&tail, int val)
+void insert_at_tail(Node* &head, Node* &tail, int val)
 {
-    Node *newNode = new Node(val);
+    Node* newNode = new Node(val);
     if (head == NULL)
     {
         head = newNode;
@@ -35,8 +40,8 @@ void insert_at_tail(Node *&head, Node *&tail, int val)
 
 void insert_at_any_position(Node *&head, int indx, int val)
 {
-    Node *newnode = new Node(val);
-    Node *temp = head;
+    Node* newnode = new Node(val);
+    Node* temp = head;
     for (int i = 1; i < indx; i++)
     {
         temp = temp->next;
@@ -45,10 +50,10 @@ void insert_at_any_position(Node *&head, int indx, int val)
     temp->next = newnode;
 }
 
-int size_linked_list(Node *head)
+int size_linked_list(Node* head)
 {
     int count = 0;
-    Node *temp = head;
+    Node* temp = head;
     while (temp != NULL)
     {
         count++;
@@ -59,7 +64,7 @@ int size_linked_list(Node *head)
 
 void print_linked_list(Node *head)
 {
-    Node *temp = head;
+    Node* temp = head;
     while (temp != NULL)
     {
         cout << temp->val << " ";
@@ -71,8 +76,8 @@ void print_linked_list(Node *head)
 int main()
 {
 
-    Node *head = NULL;
-    Node *tail = NULL;
+    Node* head = NULL;
+    Node* tail = NULL;
     int val;
     while (true)
     {
@@ -100,7 +105,7 @@ int main()
         }
         else if (idx == 0)
         {
-            insert_at_head(head, val);
+            insert_at_head(head, tail, val);
             print_linked_list(head);
         }
         else
