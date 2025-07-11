@@ -62,6 +62,31 @@ int size_linked_list(Node* head)
     return count;
 }
 
+// Delete at index
+void delete_at_index(Node* &head, Node* &tail, int index) {
+    if (head == NULL) return;
+
+    if (index == 0) {
+        Node* deleteNode = head;
+        head = head->next;
+        delete deleteNode;
+        if (head == NULL) tail = NULL; // list became empty
+        return;
+    }
+
+    Node* temp = head;
+    for (int i = 0; i < index - 1 && temp->next != NULL; i++) {
+        temp = temp->next;
+    }
+
+    if (temp->next == NULL) return; // invalid index
+
+    Node* deleteNode = temp->next;
+    temp->next = temp->next->next;
+    if (temp->next == NULL) tail = temp; // updated tail if last node was deleted
+    delete deleteNode;
+}
+
 void print_linked_list(Node *head)
 {
     Node* temp = head;
