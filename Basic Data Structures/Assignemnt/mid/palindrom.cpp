@@ -85,7 +85,7 @@ int main()
     //     cout << "NO" << endPointl;
     // }
 
-    (palindrome(head)) ? cout << "YES" << endPointl : cout << "NO" << endPointl;
+    (palindrome(head)) ? cout << "YES" << endl : cout << "NO" << endl;
 
     return 0;
 }
