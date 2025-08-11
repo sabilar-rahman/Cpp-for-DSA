@@ -66,7 +66,7 @@ int cont_LeAF_nodes(Node *root)
         return 1;
     int l = cont_LeAF_nodes(root->left);
     int r = cont_LeAF_nodes(root->right);
-    return l + r ;
+    return l + r;
 }
 
 int main()
