@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool visited[1005][1005];
-int n, m;
 vector<pair<int, int>> d = {{-2, -1}, {-1, -2}, {1, -2}, {2, -1}, {-2, 1}, {-1, 2}, {1, 2}, {2, 1}};
+bool visited[1005][1005];
+int N, M;
 bool isValid(int x, int y)
 {
-    if (x >= 0 && x < n && y >= 0 && y < m)
+    if (x >= 0 && x < N && y >= 0 && y < M)
         return true;
     return false;
 }
@@ -38,11 +38,11 @@ int minSteps(pair<int, int> kni, pair<int, int> que)
 }
 int main()
 {
-    int a;
-    cin >> a;
-    while (a--)
+    int n;
+    cin >> n;
+    while (n--)
     {
-        cin >> n >> m;
+        cin >> N >> M;
         pair<int, int> kni, que;
         cin >> kni.first >> kni.second;
         cin >> que.first >> que.second;
